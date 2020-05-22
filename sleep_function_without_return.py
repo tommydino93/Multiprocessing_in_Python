@@ -3,7 +3,12 @@ import time
 
 
 def wait(seconds: int):
-    """This function takes as input an int number N, wait for N seconds, prints the number of seconds waited, and returns """
+    """This function takes as input an int number N, wait for N seconds and prints the number of seconds waited
+    Args:
+        seconds (int): number of seconds to wait
+    Returns:
+        None
+    """
     time.sleep(seconds)
     print("Slept {0} seconds".format(seconds))
 
