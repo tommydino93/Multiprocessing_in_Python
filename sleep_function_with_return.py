@@ -1,6 +1,8 @@
 import multiprocessing as mp
 import time
 
+"""In this script we see how to get the returned outputs of a function called with a Pool of processes"""
+
 
 def wait(seconds: int):
     """This function takes as input an int number N, waits for N seconds, prints N,
