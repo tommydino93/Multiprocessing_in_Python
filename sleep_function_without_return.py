@@ -7,7 +7,7 @@ it with the multiprocess approach (i.e. with a Pool of processes), the script ta
 
 
 def wait(seconds: int):
-    """This function takes as input an int number N, wait for N seconds and prints the number of seconds waited
+    """This function takes as input an int number N, wait for N seconds and prints the number of seconds waited.
     Args:
         seconds (int): number of seconds to wait
     Returns:
