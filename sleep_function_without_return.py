@@ -1,6 +1,10 @@
 import multiprocessing as mp
 import time
 
+"""In this script we see the time advantage of using multiprocessing. We define a function that waits some time and prints
+something. We show that by running the function in a sequential manner, the script takes about 8 seconds, while by running
+it with the multiprocess approach (i.e. with a Pool of processes), the script takes about 2 seconds."""
+
 
 def wait(seconds: int):
     """This function takes as input an int number N, wait for N seconds and prints the number of seconds waited
