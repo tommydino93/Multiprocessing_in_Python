@@ -12,7 +12,6 @@ def wait(seconds: int):
 start_sequential = time.time()  # start timer of sequential approach
 for i in range(1, 5):  # i will be 1, 2, 3, 4
     wait(2)  # wait 2 seconds
-
 end_sequential = time.time()  # stop timer of sequential approach
 print("Sequential approach took {:.2f} seconds\n".format(end_sequential-start_sequential))
 
