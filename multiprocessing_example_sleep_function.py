@@ -20,7 +20,7 @@ num_workers = mp.cpu_count()  # save number of available CPUs (threads)
 pool = mp.Pool(processes=num_workers)  # create pool object and set as many processes as there are CPUs
 start_mp = time.time()  # start timer of multiprocessing approach
 results = [pool.apply_async(wait, args=(2,)) for i in range(1, 5)]  # apply function asyncronously using pool of processes
-pool.close()  # prevent any more tasks from being submitted to the pool. Once all the tasks have been completed the worker processes will exit.
+pool.close()  # prevent any more tasks from being submitted to the pool.
 pool.join()  # wait for everything on the queue to be processed
 end_mp = time.time()  # stop timer of multiprocessing approach
 print("Multiprocessing approach took {:.2f} seconds".format(end_mp-start_mp))
