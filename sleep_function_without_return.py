@@ -13,14 +13,14 @@ def wait(seconds: int):
     print("Slept {0} seconds".format(seconds))
 
 
-# call function 4 times sequentially (i.e. without multiprocessing)
+# ------------------------------------------- SEQUENTIAL APPROACH ------------------------------------------------------
 start_sequential = time.time()  # start timer of sequential approach
-for i in range(1, 5):  # i will be 1, 2, 3, 4
+for i in range(1, 5):  # call function 4 times sequentially (i.e. without multiprocessing)
     wait(2)  # wait 2 seconds
 end_sequential = time.time()  # stop timer of sequential approach
 print("Sequential approach took {:.2f} seconds\n".format(end_sequential-start_sequential))
 
-# DEFINE pool of processes
+# ----------------------------------------- MULTIPROCESSING APPROACH ----------------------------------------------------
 num_workers = mp.cpu_count()  # save number of available CPUs (threads)
 pool = mp.Pool(processes=num_workers)  # create pool object and set as many processes as there are CPUs
 start_mp = time.time()  # start timer of multiprocessing approach
