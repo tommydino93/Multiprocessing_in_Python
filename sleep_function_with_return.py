@@ -19,13 +19,13 @@ def wait(seconds: int):
     return seconds, double
 
 
-start_mp = time.time()
+start_mp = time.time()  # start timer
 num_workers = mp.cpu_count()  # save number of available CPUs (threads)
 pool = mp.Pool(processes=num_workers)  # create pool object and set as many processes as there are CPUs
 results = [pool.apply_async(wait, args=(i,)) for i in range(1, 5)]
 pool.close()  # prevent any more tasks from being submitted to the pool
 pool.join()  # wait for everything on the queue to be processed
-end_mp = time.time()
+end_mp = time.time()  # stop timer
 print("\nOutputs:")
 for result in results:
     print(result.get())
